@@ -29,7 +29,7 @@ Actual time needed to complete:
 ## Credit and Collaborations
 Starter code was provided by John in a demo. 
 Template repos were provided by Code Fellows.
-
+Assistance from Brandon, Tammy and Felix.
 
 ## Team Agreements
 
