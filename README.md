@@ -16,15 +16,15 @@ JavaScript, React, Netlify, MongoDB, Render
 File and repo setup
 
 ## Estimates
-Name of feature: database setup
+Name of feature: Added post/delete
 
-Estimate of time needed to complete: 2 hrs
+Estimate of time needed to complete: 3 hrs
 
-Start time: 4pm PST
+Start time: 3pm PST
 
-Finish time:
+Finish time:7 PM
 
-Actual time needed to complete: 
+Actual time needed to complete: 3:45 
 
 ## Credit and Collaborations
 Starter code was provided by John in a demo. 
