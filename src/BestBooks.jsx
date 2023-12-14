@@ -97,7 +97,7 @@ function BestBooks() {
     console.log("Sending updated book details to server", book);
     
     if (book._id){
-      let response = await axios.put(`${local}/books/${book._id}`, book);
+      let response = await axios.put(`${server}/books/${book._id}`, book);
       let updatedBook = response.data;
       console.log("Back from the server - book is:", updatedBook);
   
