@@ -126,7 +126,7 @@ function BestBooks() {
                 
               <Carousel.Item key= {book._id}>
                 <img 
-                  src="./img/joao-unsplash-shelf.jpg"
+                  src="./src/img/joao-unsplash-shelf.jpg"
                   alt={book.title}
                   style={{width:"900px", height:"400px"}}
                 />
