@@ -3,11 +3,17 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
+
 function bookModal(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  function handleModalSubmit (e){
+    handleClose();
+    props.handleSubmit(e);
+  }
 
   return (
     <>
@@ -43,8 +49,8 @@ function bookModal(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={props.handleSubmit}>
-            Save Changes
+          <Button variant="primary" onClick={handleModalSubmit}>
+            Save 
           </Button>
         </Modal.Footer>
       </Modal>

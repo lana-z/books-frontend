@@ -8,9 +8,9 @@ class Header extends React.Component {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
         <Navbar.Brand>My Favorite Books</Navbar.Brand>
-        <NavItem ><Link to="/" className="nav-link">Home</Link></NavItem>
-        <NavItem><Link to="/books" className="nav-link">Books</Link></NavItem>
-        <NavItem><Link to="/about" className="nav-link">About</Link></NavItem>
+        <NavItem ><Link to="/" className="nav-link" style={{color: "black"}}>Home</Link></NavItem>
+        <NavItem><Link to="/books" className="nav-link"  style={{color: "black"}}>Books</Link></NavItem>
+        <NavItem><Link to="/about" className="nav-link" style={{paddingRight: "30px", color: "black"}}>About</Link></NavItem>
       </Navbar>
     )
   }
