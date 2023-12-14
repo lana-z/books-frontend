@@ -13,23 +13,25 @@ Check out books that you have read and add books to the list.
 JavaScript, React, Netlify, MongoDB, Render
 
 ## Change Log
-File and repo setup
+File and repo setup and add a book
+Delete a book
+Update a book 
 
 ## Estimates
 Name of feature: Added post/delete
 
 Estimate of time needed to complete: 3 hrs
 
-Start time: 3pm PST
+Start time: 1:30pm PST
 
-Finish time:7 PM
+Finish time: 4:30pm PST
 
-Actual time needed to complete: 3:45 
+Actual time needed to complete: 3 hrs
 
 ## Credit and Collaborations
 Starter code was provided by John in a demo. 
 Template repos were provided by Code Fellows.
-Assistance from Brandon, Tammy and Felix.
+Assistance from Brandon, Tammy, JB and our classmate Felix.
 
 ## Team Agreements
 
