@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import BookModal from './BestBooksModal.jsx';
 import UpdateBook from './UpdateBook.jsx';
+
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 // const server = import.meta.env.VITE_SERVER;
@@ -117,24 +118,28 @@ function BestBooks() {
   if (books) {
     return (
       <>
-        <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
-        
-        <BookModal handleSubmit={handleSubmit} handleChange={handleChange}/>
-        <Carousel>
-          {
-          books.map( book =>
-            
-          <Carousel.Item key= {book._id}>
-            <img src={`https://placehold.co/600x400?text=${book.title}`}/>
-            <Carousel.Caption>
-              <h3 style={{cursor:"pointer"}} onClick={ () => selectBook(book)}>{book.title} </h3>
-              <p style={{cursor:"pointer"}} onClick={ () => selectBook(book)}>{book.description}</p>
-              <span id={book._id} onClick={handleDelete} style={{marginLeft:".5em", color:"red", cursor:"pointer"}}>Delete Book</span>
-            </Carousel.Caption>
-          </Carousel.Item>
-          )} 
-        </Carousel>
-
+        <h2>My Book Nook</h2>
+            <BookModal handleSubmit={handleSubmit} handleChange={handleChange}/>
+            <Carousel>
+              {
+              books.map( book =>
+                
+              <Carousel.Item key= {book._id}>
+                <img 
+                  src="./src/img/joao-unsplash-shelf.jpg"
+                  alt={book.title}
+                  style={{width:"900px", height:"400px"}}
+                />
+                <div className="caption-container">
+                  <Carousel.Caption>  
+                    <h3 style={{cursor:"pointer"}} onClick={ () => selectBook(book)}>{book.title} </h3>
+                    <p style={{cursor:"pointer", color: "#A2B266"}} onClick={ () => selectBook(book)}>{book.description}</p>
+                    <span id={book._id} onClick={handleDelete} style={{marginLeft:".5em", color:"red", cursor:"pointer"}}>Delete Book</span>
+                  </Carousel.Caption>
+                </div>
+              </Carousel.Item>
+              )} 
+            </Carousel>
         <UpdateBook handleSubmit={handleUpdateBook} book={selectedBook} />
       </>
     )

@@ -31,7 +31,10 @@ function UpdateBook(props) {
             <input onChange={handleChange} name="title" value={book.title}/>
             <input onChange={handleChange} name="description" value={book.description}/>
             {/* <button type="submit">Update Book</button> */}
-            <Button variant="outline-secondary" as="input" type="submit" value="Update Book"></Button>{' '}
+            <Button 
+                className="Updatebutton"
+                variant="outline-secondary" 
+                as="input" type="submit" value="Update Book"></Button>{' '}
         </form>
         </>
     )

@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import BestBooks from './BestBooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,7 +19,7 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-          <Routes>
+          <Routes className="routes">
             <Route exact path="/books" element={<BestBooks />}/>
             <Route exact path="/about" element={<About />}/>
             <Route exact path="/" element={<Home />}/>
