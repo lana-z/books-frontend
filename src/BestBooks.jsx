@@ -10,9 +10,9 @@ import UpdateBook from './UpdateBook.jsx';
 
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
-// const server = import.meta.env.VITE_SERVER;
+const server = import.meta.env.VITE_SERVER;
 
-const local = import.meta.env.VITE_LOCAL;
+// const local = import.meta.env.VITE_LOCAL;
 
 function BestBooks() {
 
@@ -50,7 +50,7 @@ function BestBooks() {
       description
     };
     console.log('this is what is sent',book)
-    let response = await axios.post(`${local}/books`, book);
+    let response = await axios.post(`${server}/books`, book);
     console.log('server response', response.data);
 
     setBooks([...books, response.data])
@@ -59,7 +59,7 @@ function BestBooks() {
   const handleDelete = async (e) => {
     try{
     console.log(e.target)
-    let response = await axios.delete(`${local}/books/${e.target.id}`)
+    let response = await axios.delete(`${server}/books/${e.target.id}`)
     console.log(response)
     let book = response.data;
 
@@ -80,7 +80,7 @@ function BestBooks() {
 
     async function fetchBooks() {
       try {
-        let responseBook = await axios.get(`${local}/books`);
+        let responseBook = await axios.get(`${server}/books`);
         setBooks(responseBook.data);
       } catch {
         console.error('Books server call not working.');
@@ -97,7 +97,7 @@ function BestBooks() {
     console.log("Sending updated book details to server", book);
     
     if (book._id){
-      let response = await axios.put(`${local}/books/${book._id}`, book);
+      let response = await axios.put(`${server}/books/${book._id}`, book);
       let updatedBook = response.data;
       console.log("Back from the server - book is:", updatedBook);
   
